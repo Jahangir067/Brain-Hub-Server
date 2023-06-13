@@ -67,7 +67,7 @@ async function run() {
         next();
     }
 
-    // users apis
+    // Secure user 
     app.get('/users', verifyJWT, verifyAdmin, async(req, res) => {
         const result = await popularUsers.find().toArray();
         res.send(result);

@@ -145,7 +145,7 @@ async function run() {
         res.send(result);
     })
 
-    // cart collection
+    // cart collection apis
     app.get('/carts', verifyJWT, async(req, res) => {
         const email = req.query.email;
         console.log(email)

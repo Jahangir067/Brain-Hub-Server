@@ -52,6 +52,7 @@ async function run() {
     const popularInstructor = client.db("brainHub").collection("instructor");
     const popularcarts = client.db("brainHub").collection("carts");
 
+    // jwt added
     app.post('/jwt', (req, res) => {
         const user = req.body;
         const token = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, {expiresIn: '1h'})
